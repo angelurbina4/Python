@@ -11,17 +11,17 @@ student = [
 #         for k in x:
 #             print(f"{k} - {x[k]}")
 
-def iterateDictionary(student):
-    for i in range(len(student)):
-        for key, value in student[i].items():
-            print(key, value)
+# def iterateDictionary(student):
+#     for i in range(len(student)):
+#         for key, value in student[i].items():
+#             print(key, value)
     
 
-# def iterateDictionary(student):
-#     for k in student:
-#         x = k
-#         y = x['first_name']
-#         z = x['last_name']
-#         print(f"first_name - {y}, last_name - {z}")
+def iterateDictionary(student):
+    for k in student:
+        x = k
+        y = x['first_name']
+        z = x['last_name']
+        print(f"first_name - {y}, last_name - {z}")
 
 print(iterateDictionary(student))
