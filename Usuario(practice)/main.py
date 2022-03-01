@@ -14,6 +14,7 @@ mary.hacer_deposito(100)
 mary.hacer_retiro(50)
 mary.transferir_dinero(john, 20)
 mary.mostrar_balance_usuario()
+mary.hacer_deposito(100).hacer_retiro(50).transferir_dinero(john, 5).mostrar_balance_usuario()
 
 john.transferir_dinero(mary, 100)
 
