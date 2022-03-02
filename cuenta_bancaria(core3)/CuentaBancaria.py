@@ -7,7 +7,7 @@ class CuentaBancaria:
         self.balance = balance
         CuentaBancaria.lista_cuentas.append(self)
 
-    def hacer_retiro(self, cantidad):
+    def hacer_retiro(self, cantidad, cta_debitar):
         if CuentaBancaria.puede_retirar(self.balance, cantidad):
             self.balance -= cantidad
         else: 
@@ -38,10 +38,10 @@ class CuentaBancaria:
         print(f"Tasa: {self.tasa_int}, Balance: {self.balance}")
         return self
 
-    def transfer_dinero(self, otra_cuenta, cantidad):
+    def transfer_dinero(self, usuario, cantidad, cta_creditar):
         if CuentaBancaria.puede_retirar(self.balance, cantidad):
             self.balance -= cantidad
-            otra_cuenta.cuenta.balance += cantidad
+            usuario.cuentas[cta_creditar].balance += cantidad
         else:
             print("Su balance no es suficiente para realizar esta transaccion")
 
